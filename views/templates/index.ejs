@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee App</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h1>Add Employee</h1>
+  <form action="/employee/add" method="POST">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed">
+  
+    <label for="employeeID">Employee ID:</label>
+    <input type="text" id="employeeID" name="employeeID" required pattern="[0-9]+" title="Only numbers are allowed">
+  
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" required min="0" title="Enter a positive number">
+  
+    <label for="workingDepartment">Department:</label>
+    <input type="text" id="workingDepartment" name="workingDepartment" required title="Please enter a department">
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required title="Enter a valid email address">
+  
+    <button type="submit">Add Employee</button>
+  </form>
+  <center><a href="/employee/list">View All Employees</a></center>
+</body>
+</html>
